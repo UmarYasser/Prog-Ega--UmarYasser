@@ -1,0 +1,13 @@
+*4thWeek, 1st Day: (New Plan)*
+
+A) Achieve the following appearance in 1st Video [Resizable Text]
+
+B) Achieve the following appearance in 2nd Video [Background Cycle]
+*Hint*: Use `array` & counter `i`
+
+🌟*Star Task*:Achieve the following appearance in 3nd Video [Coloring Buttons]
+*Copy the file `3rd.html` and just apply the script to it.
+*Hint*: Use `functions` & `for loop`
+
+D) Make the Crazy div (4th video)
+

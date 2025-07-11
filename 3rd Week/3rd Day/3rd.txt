@@ -1,0 +1,39 @@
+*3rd Day, 3rd Week:*
+*A) Given this structure:*
+```<head>
+      <style>
+        .green { color: green; }
+        .purple { color: purple; }
+    </style>
+</head>
+<body>
+    <div id="p1" class="purple">
+        p1
+        <div id="ch1" style="color:red">ch1</div>
+        <div id="p2" style="color:blue">
+            p1
+            <div id="ch2">ch2</div>
+            <div id="ch3">ch3</div>
+        </div>  
+    </div>
+    <script src="1stDay.js"></script>
+    
+</body>```
+1-Make “ch2” have the same “style” as “ch1” *without setting it to ‘red’ manually*.
+
+2-Make “ch3” have the same class as p1 ( without setting ch3’s to ‘purple’ directly).
+
+
+3-Change ch2’s color to purple *via ch3*.
+
+🌟 *Star Task*: Remove the ‘purple’ class from any element that has it, *without calling each element separately*.
+
+*Hint* : Use `for loop` & `array properties` 🌟
+
+   
+B) Which attribute will change the element which won’t be accessed like before:
+
+A) Element.innerHTML
+B) Element.outerHTML
+C) Element.innerText
+D) Element.outerText

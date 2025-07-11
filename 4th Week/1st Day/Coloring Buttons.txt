@@ -1,0 +1,33 @@
+let btn = document.getElementById("btn");
+const colors = ["purple", "green", "red"];  
+let i = 0;
+btn.addEventListener("click", function(){
+    if( i >= colors.length) {
+        i = 0;
+    }
+    document.body.style.backgroundColor = colors[i++]
+})
+let btnPu = document.getElementById("btnPu");
+let btnGr = document.getElementById("btnGr");
+let btnRd = document.getElementById("btnRd");
+btnPu.onmouseover = function() {
+    btnPu.style.backgroundColor = "grey";
+    document.body.style.backgroundColor = "purple";
+}
+btnPu.onmouseleave = function() {
+    btnPu.style.backgroundColor = "white";
+}
+btnGr.onmouseover = function() {
+    btnGr.style.backgroundColor = "grey";
+    document.body.style.backgroundColor = "green";
+}
+btnGr.onmouseleave = function() {
+    btnGr.style.backgroundColor = "white";
+}
+btnRd.onmouseover = function() {
+    btnRd.style.backgroundColor = "grey";
+    document.body.style.backgroundColor = "red";
+}
+btnRd.onmouseleave = function() {
+    btnRd.style.backgroundColor = "white";
+}

@@ -1,0 +1,40 @@
+Head 1st Video: 
+<h2>Resizable Text, type the size  you want ( h1 => h6)</h3>
+    <input type="text" id="input" placeholder="Type h1.”>
+    <div id="text">
+        <h2> Resize me😉</h2>
+    </div>
+-----
+let input = document.getElementById("input");
+let text = document.getElementById("text");
+input.addEventListener("input", function() {
+    console.log(input.value);
+    switch(input.value) {
+        case "h1":
+            text.innerHTML = "<h1>Resize me😉</h1>";
+        break;
+        case "h2":
+        text.innerHTML = "<h2>Resize me😉</h2>";
+        break;
+        case "h3":
+            text.innerHTML = "<h3>Resize me😉</h3>";
+            break;
+            case "h4":
+                text.innerHTML = "<h4>Resize me😉</h4>";
+        break;
+    case "h5":
+        text.innerHTML = "<h5>Resize me😉</h5>";
+        break;
+    case "h6":
+        text.innerHTML = "<h6>Resize me😉</h6>";
+            break;
+        }
+});
+
+Head 2nd Video:
+<button id="btn">Try Clicking me😉</button>
+    <br>
+    <br>
+    <button id="btnPu">Purple</button>
+    <button id="btnGr">Green</button>
+    <button id="btnRd">Red</button>

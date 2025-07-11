@@ -1,0 +1,56 @@
+A) Make the Crazy Block (1st Video)
+
+*Hint*: Use `if` with style.backgroundColor and check if HighestScore == "undefined"
+
+
+CrazyBlock:
+
+setTimeout(() => { // To Change the background color after 1 second
+    document.body.style.backgroundColor = "bisque"
+},1000)
+
+let score = document.getElementById("score");
+let scoreValue = 0;
+if(localStorage.getItem("Highestscore") == "undefined") {
+    localStorage.setItem("Highestscore", JSON.stringify(0));
+    console.log("Highest Score set to 0");
+}
+
+
+let highestScore = document.getElementById("Hscore");
+highestScore.innerText = localStorage.getItem("Highestscore");
+console.log("Highest Score: ", localStorage.getItem("Highestscore"));
+let red = document.getElementById("red");
+let twitching = setInterval( () => {
+    // To change the background color of block every 700ms
+    if(red.style.backgroundColor === "red") 
+        red.style.backgroundColor = "blue";
+    else 
+        red.style.backgroundColor = "red";
+    
+    // red.style.backgroundColor = red.style.backgroundColor === 'red' ? "blue": "red" 
+},700)
+
+red.onclick = () => {
+
+    if(red.style.backgroundColor === "blue") {
+        scoreValue++;
+        score.innerText = scoreValue;
+    }else if(red.style.backgroundColor === "red") {
+        clearInterval(twitching); // To stop the twitching effect
+        
+        red.style.backgroundColor = "black";
+        if(scoreValue > localStorage.getItem("Highestscore")) {
+            localStorage.setItem("Highestscore", JSON.stringify(scoreValue));
+
+        }
+        
+        document.getElementById("WhenLosing").innerText = "You Lost! Refresing in 3 seconds ...";
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+        
+        score.innerText = "0";
+    }
+}
+// Utilizes: Local Storage, setTimeout, setInterval, onclick event, and locatoin.reload()
