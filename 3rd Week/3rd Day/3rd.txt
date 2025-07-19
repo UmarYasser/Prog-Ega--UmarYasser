@@ -11,7 +11,7 @@
         p1
         <div id="ch1" style="color:red">ch1</div>
         <div id="p2" style="color:blue">
-            p1
+            p2
             <div id="ch2">ch2</div>
             <div id="ch3">ch3</div>
         </div>  
